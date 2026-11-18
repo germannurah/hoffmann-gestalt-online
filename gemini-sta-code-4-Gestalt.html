@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestaltberatung & Prozessbegleitung – Nora Hoffmann</title>
+    <meta name="description" content="Einzelsitzungen in prozessorientierter Gestaltberatung und vertiefter Selbstreflexion – online und in Freiburg.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F9F8F6;
+            --text-color: #0A2540;
+            --muted-color: #4A5568;
+            --border-color: #DAA520;
+            --card-bg: #FFFFFF;
+            --font-serif: 'EB Garamond', Georgia, serif;
+            --font-sans: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            font-weight: 300;
+            padding: 0 1.5rem;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 0 120px 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(218, 165, 32, 0.3);
+            padding-bottom: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .logo-text {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            color: var(--muted-color);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--text-color);
+        }
+
+        .hero {
+            margin-bottom: 5rem;
+        }
+
+        h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--muted-color);
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: var(--text-color);
+            background: transparent;
+            border: 1px solid var(--border-color);
+            padding: 0.8rem 1.8rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            letter-spacing: 0.03em;
+        }
+
+        .btn:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            border-color: var(--text-color);
+        }
+
+        section {
+            margin-bottom: 5rem;
+        }
+
+        h2 {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background-color: var(--border-color);
+            margin-top: 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--muted-color);
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 1.2rem;
+            color: var(--muted-color);
+        }
+
+        li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--border-color);
+        }
+
+        li strong {
+            color: var(--text-color);
+            font-weight: 400;
+        }
+
+        .principles {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .principle-card {
+            background: var(--card-bg);
+            border-left: 2px solid var(--border-color);
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 20px rgba(10, 37, 64, 0.02);
+        }
+
+        .principle-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .principle-card p {
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        .contact-box {
+            background: var(--card-bg);
+            border: 1px solid rgba(218, 165, 32, 0.2);
+            padding: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        footer {
+            border-top: 1px solid rgba(218, 165, 32, 0.3);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--muted-color);
+        }
+
+        footer a {
+            color: var(--muted-color);
+            text-decoration: none;
+            margin-left: 1.5rem;
+        }
+
+        footer a:hover {
+            color: var(--text-color);
+        }
+
+        @media (min-width: 600px) {
+            body {
+                padding: 0 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <a href="#" class="logo-text">Gestaltberatung & Prozessbegleitung</a>
+            <nav>
+                <a href="#arbeitsweise">Arbeitsweise</a>
+                <a href="#rahmen">Rahmen</a>
+                <a href="#kontakt">Kontakt</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h1>Klarheit im Innen. Orientierung im Wandel.</h1>
+                <p class="subtitle">Einzelsitzungen in prozessorientierter Gestaltberatung und vertiefter Selbstreflexion – vertraulich, strukturiert und auf Augenhöhe. Online (DACH & international) sowie nach Vereinbarung in Freiburg.</p>
+                <a href="#kontakt" class="btn">Unverbindliches Erstgespräch anfragen</a>
+            </section>
+
+            <section id="anliegen">
+                <h2>Wann eine Begleitung sinnvoll ist</h2>
+                <p>Manchmal stehen innere Entwicklungsschritte an, die im Alltag oder in bestehenden beruflichen und privaten Kontexten schwer allein zu ordnen sind:</p>
+                <ul>
+                    <li><strong>Berufliche und persönliche Neuorientierung:</strong> Wenn äußere Rollen nicht mehr tragen und tragfähige nächste Schritte gesucht werden.</li>
+                    <li><strong>Innere Blockaden und Selbstkritik:</strong> Wenn wiederkehrende Muster, Erschöpfung oder innere Konflikte den eigenen Handlungsspielraum einengen.</li>
+                    <li><strong>Beziehungs- und Abgrenzungsfragen:</strong> Wenn Klarheit in familiären, partnerschaftlichen oder beruflichen Dynamiken notwendig wird.</li>
+                    <li><strong>Finanzielle und materielle Selbstreflexion:</strong> Wenn der Umgang mit Geld, Eigenständigkeit und innerer Wertschätzung neu geordnet werden soll.</li>
+                </ul>
+            </section>
+
+            <section id="arbeitsweise">
+                <h2>Arbeitsweise</h2>
+                <p>Im Mittelpunkt steht die unmittelbare Wahrnehmung dessen, was im gegenwärtigen Moment wirkt – gedanklich, emotional und körperlich. Statt fertiger Ratschläge bietet der gestaltorientierte Dialog einen geschützten Raum, um unbewusste Muster sichtbar zu machen, eigene Ressourcen zu erschließen und stimmige Entscheidungen aus sich selbst heraus zu entwickeln.</p>
+                
+                <div class="principles">
+                    <div class="principle-card">
+                        <h3>Präsenz statt Analyse</h3>
+                        <p>Wir betrachten nicht nur die Geschichte hinter einem Thema, sondern wie es sich im Hier und Jetzt zeigt.</p>
+                    </div>
+                    <div class="principle-card">
+                        <h3>Eigenverantwortung</h3>
+                        <p>Sie bestimmen Tempo und Tiefe des Prozesses. Die Antworten sind bereits in Ihnen angelegt.</p>
+                    </div>
+                    <div class="principle-card">
+                        <h3>Absolute Diskretion</h3>
+                        <p>Alle Gespräche unterliegen strenger Vertraulichkeit und finden ohne digitale Aufzeichnung statt.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="hintergrund">
+                <h2>Hintergrund</h2>
+                <p>Mehrjährige Ausbildung in Integrativer Gestaltberatung (Berlin) sowie fundiertes Studium der Psychologie, Anthropologie und Sprachen (Freiburg & Berlin). Langjährige internationale Praxis in Einzelbegleitung, Prozessmoderation und strukturierter Selbstreflexion in den USA und Deutschland.</p>
+                <p><strong>Arbeitssprachen:</strong> Deutsch und Englisch.</p>
+            </section>
+
+            <section id="rahmen">
+                <h2>Rahmen & Konditionen</h2>
+                <p><strong>Format:</strong> Einzelsitzungen (60 oder 90 Minuten) per geschützter Videoverbindung oder vor Ort in Freiburg im Breisgau.</p>
+                <p><strong>Kennenlernen:</strong> Ein kurzes telefonisches oder digitales Vorgespräch (20 Minuten, kostenfrei) dient der Klärung Ihres Anliegens und der gegenseitigen Passung.</p>
+                <p style="font-size: 0.95rem; color: #718096; margin-top: 1rem;"><em>Hinweis: Die Beratung versteht sich als prozessbegleitende Persönlichkeits- und Entscheidungsarbeit und ersetzt keine medizinische oder heilkundliche Psychotherapie.</em></p>
+            </section>
+
+            <section id="kontakt">
+                <h2>Kontakt</h2>
+                <div class="contact-box">
+                    <p style="margin-bottom: 1rem;">Für die Vereinbarung eines Vorgesprächs schreiben Sie mir gerne eine E-Mail:</p>
+                    <p style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-color); margin-bottom: 1.5rem;"><strong>kontakt@gestaltberatung-online.de</strong></p>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;">Bitte nennen Sie kurz Ihr Anliegen und ob Sie ein Online-Format oder Sitzungen in Freiburg bevorzugen.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div>© Nora Hoffmann • Alle Rechte vorbehalten</div>
+            <div>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
